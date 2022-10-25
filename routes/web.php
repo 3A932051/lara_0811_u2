@@ -39,3 +39,6 @@ Route::get('hello/{name?}', function ($name = 'Everybody'){
 Route::get('kido', function (){
  return 'kido';
 });//自訂路由
+Route::get('hello/{name?}', function ($name = 'Everybody'){
+ return 'Hello, '.$name;
+})->name('hello.index');//路由命名
