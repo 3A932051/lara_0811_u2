@@ -15,4 +15,9 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
+	//回傳view預設就有
+});
+
+Route::get('/', function () {
+ return 'welcome';
 });
