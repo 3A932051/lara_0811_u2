@@ -42,3 +42,12 @@ Route::get('kido', function (){
 Route::get('hello/{name?}', function ($name = 'Everybody'){
  return 'Hello, '.$name;
 })->name('hello.index');//路由命名
+
+Route::get('dashboard', function (){
+ return 'dashboard';
+});//route前置
+Route::group(['prefix' => 'admin'], function(){
+ Route::get('dashboard', function (){
+ return 'admin dashboard';
+ });
+});//設定另一個route以群組包起來設定prefix
