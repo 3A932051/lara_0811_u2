@@ -36,3 +36,6 @@ Route::get('hello/{name?}', function ($name = 'Everybody'){
  return 'Hello, '.$name;
 });//修改參數成選擇性
 
+Route::get('kido', function (){
+ return 'kido';
+});//自訂路由
